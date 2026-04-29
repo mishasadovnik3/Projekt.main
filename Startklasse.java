@@ -1,10 +1,11 @@
-package paket_J540;
+package paket_1;
 
-public class StartKlasse
-{
-  public static void main(String[] args)
-	 { // Objekt deklarieren und erzeugen
-	  HauptFenster fenster1 = new HauptFenster();
-      fenster1.setVisible(true);
-	 }
+public class Startklasse {
+
+	public static void main(String[] args) {
+		HauptFenster fenster1 = new HauptFenster();
+		fenster1.setVisible(true);
+	}
+
 }
+
