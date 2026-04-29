@@ -27,10 +27,8 @@ public class HauptFenster extends JFrame {
 	private JCheckBox cbInfo = new JCheckBox("Informatik");
 	private JCheckBox cbAllg = new JCheckBox("Allgemeinwissen");
 
-	String geheimesWort = themen1.getRandomWord(); // kommt jetzt aus MySQL
-
 	public HauptFenster() {
-		boolean mOK = themen1.getAktuellerZugriff().oeffeneDB();
+		boolean mOK = themen1.getAktuelleZugirff().oeffeneDB();
 		if(mOK)
 		{JOptionPane.showMessageDialog(null, "DB ist geöffnet");
 		}
@@ -64,7 +62,7 @@ public class HauptFenster extends JFrame {
 		
 		JLabel lblNewLabel = new JLabel("________");
 		lblNewLabel.setFont(new Font("SAPDings", Font.PLAIN, 15));
-		lblNewLabel.setBounds(194, 459, 169, 16);
+		lblNewLabel.setBounds(183, 407, 169, 16);
 		contentPane.add(lblNewLabel);
 		
 		txtA = new JTextField();
@@ -80,7 +78,7 @@ public class HauptFenster extends JFrame {
 		JButton btSchliessen = new JButton("Schliessen");
 		btSchliessen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				boolean mOK = themen1.getAktuellerZugriff().schliesseDB();
+				boolean mOK = themen1.getAktuelleZugirff().schliesseDB();
 				if(mOK)
 				{JOptionPane.showMessageDialog(null, "DB ist geschlossen");
 				}
@@ -100,4 +98,10 @@ public class HauptFenster extends JFrame {
 		btBuchstabe.setBounds(562, 50, 90, 28);
 		contentPane.add(btBuchstabe);
 	}
+	
+	private ResultSet MWort()
+	{ResultSet rWort;
+	 rWort = themen1.Wortablesen();
+		for(int i = 0; )
+	};
 }
